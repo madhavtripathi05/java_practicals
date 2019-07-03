@@ -1,2 +1,3 @@
 # java_practicals
-java practicals of charusat
+Solutions : Practical list of JAVA (DEPSTAR CSE \ CE) 
+Acedemic Year : 2019-2020
