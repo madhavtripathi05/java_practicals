@@ -20,7 +20,7 @@ public class mprac3 {
   }
 
   public static void printId() {
-    prints("ID:18DCS129 \nNAME:MADHAV ");
+    prints("\nID:18DCS129 \nNAME:MADHAV ");
   }
   // ends
 
@@ -38,6 +38,8 @@ public class mprac3 {
       prints("true");
     else
       prints("false");
+
+    printId();
 
   }
 }
