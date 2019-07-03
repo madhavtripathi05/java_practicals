@@ -1,25 +1,34 @@
 import java.util.*;
 
-public class mprac2{
+public class mprac2 {
 
-//DRY begins
-public static void prints(String str){
-  System.out.println(str);
-}
-//ends
+  // DRY begins
+  public static void prints(String str) {
+    System.out.println(str);
+  }
 
-public static void main(String[] args) {
+  public static void printId() {
+    prints("\nID:18DCS129 \nNAME:MADHAV ");
+  }
+  // ends
 
-Scanner scan = new Scanner(System.in);
-String str = scan.nextLine();
+  public static void main(String[] args) {
 
-if(str.charAt(0)=='o' && str.charAt(1)=='z')
-  prints("oz");
+    Scanner scan = new Scanner(System.in);
 
-if(str.charAt(0)=='o')
-  prints("o");
+    prints("Enter a string : ");
+    String str = scan.nextLine();
+    scan.close();
+    
+    if (str.charAt(0) == 'o' && str.charAt(1) == 'z')
+      prints("oz");
 
-if(str.charAt(1)=='z')
-  prints("z");
+    else if (str.charAt(0) == 'o')
+      prints("o");
+
+    else if (str.charAt(1) == 'z')
+      prints("z");
+
+    printId();
   }
 }

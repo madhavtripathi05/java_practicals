@@ -10,6 +10,10 @@ public class mprac7 {
   public static void printn(int num) {
     System.out.println(num);
   }
+
+  public static void printId() {
+    prints("\nID:18DCS129 \nNAME:MADHAV ");
+  }
   // ends
 
   // only valid for 2 digit numbers
@@ -74,6 +78,8 @@ public class mprac7 {
       Lottery(rn, num);
     else
       prints("invalid number(please enter a two digit number)");
+
+    printId();
   }
 
 }
