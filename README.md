@@ -3,4 +3,4 @@
 *Acedemic Year : 2019-2020*  
 >Please use it for reference only  
 
-- [x] practical 2-9
+- [x] practical 10 - 1010
