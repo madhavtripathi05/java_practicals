@@ -17,7 +17,7 @@ public class mprac9 {
 
     // checking for duplicate elements
     static boolean isValid(int[] arr) {
-        // sorting arr so we can compare it afterwards
+        // sorting arr so that we can compare it afterwards
         Arrays.sort(arr);
         int i = 0;
         for (int el : arr) {
@@ -30,7 +30,7 @@ public class mprac9 {
 
     // validating sudoku
     static boolean isValidSoln(int[][] soln) {
-        // this loop will run 9 times checking each row,col,grid
+        // this loop will run 9 times checking each row,col,grid time Complexity O(n^2)
         for (int i = 0; i < soln.length; i++) {
 
             int row[] = new int[9];
@@ -84,7 +84,6 @@ public class mprac9 {
         else
             prints("invalid");
 
-    
         printId();
     }
 }
