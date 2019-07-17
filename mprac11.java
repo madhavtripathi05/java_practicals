@@ -1,10 +1,8 @@
-import java.util.*;
-
 class Circle {
     double radius = 1.0;
 
     Circle() {
-        System.out.println("default constructor");
+        System.out.println("default constructor called");
     }
 
     Circle(double rad) {

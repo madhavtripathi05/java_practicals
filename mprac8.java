@@ -2,25 +2,11 @@ import java.util.*;
 
 public class mprac8 {
 
-    // DRY begins
-    public static void prints(String str) {
-        System.out.println(str);
-    }
-
-    public static void printn(int num) {
-        System.out.println(num);
-    }
-
-    public static void printId() {
-        prints("\nID:18DCS129 \nNAME:MADHAV ");
-    }
-    // ends
-
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
 
-        prints("Enter number of students:");
+        System.out.println("Enter number of students:");
 
         // m number of rows or students
         int m = scan.nextInt();
@@ -32,11 +18,11 @@ public class mprac8 {
         // scanning mcqs of m students
         for (int student = 0; student < m; student++) {
 
-            prints("Enter Student " + (student + 1) + "\'s data: ");
+            System.out.println("Enter Student " + (student + 1) + "\'s data: ");
 
             for (int question = 0; question < 5; question++) {
 
-                prints("mcq in " + (question + 1));
+                System.out.println("mcq in " + (question + 1));
 
                 mcq[student][question] = scan.next().charAt(0);
             }
@@ -47,11 +33,11 @@ public class mprac8 {
         // Displaying students details
         for (int student = 0; student < m; student++) {
 
-            prints("Student " + (student + 1));
+            System.out.println("Student " + (student + 1));
 
             for (int question = 0; question < 5; question++) {
 
-                prints("mcq in question " + (question + 1) + " = " + mcq[student][question]);
+                System.out.println("mcq in question " + (question + 1) + " = " + mcq[student][question]);
             }
         }
 
@@ -69,9 +55,9 @@ public class mprac8 {
 
         // displaying grades of students
         for (int student = 0; student < m; student++) {
-            prints("Grade of student " + (student + 1) + " is: " + grade[student]);
+            System.out.println("Grade of student " + (student + 1) + " is: " + grade[student]);
         }
 
-        printId();
+        System.out.println("\nID:18DCS129 \nNAME:MADHAV ");
     }
 }

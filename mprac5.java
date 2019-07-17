@@ -2,20 +2,6 @@ import java.util.*;
 
 public class mprac5 {
 
-  // DRY begins
-  public static void prints(String str) {
-    System.out.println(str);
-  }
-
-  public static void printn(int num) {
-    System.out.println(num);
-  }
-
-  public static void printId() {
-    prints("\nID:18DCS129 \nNAME:MADHAV ");
-  }
-  // ends
-
   public static int minLength(String s1, String s2) {
     if (s1.length() < s2.length())
       return s1.length();
@@ -36,16 +22,15 @@ public class mprac5 {
 
     Scanner scan = new Scanner(System.in);
 
-    prints("Enter two strings : ");
+    System.out.println("Enter two strings : ");
 
     String str1 = scan.nextLine();
     String str2 = scan.nextLine();
     scan.close();
 
-    prints("no. of occourences of substrings are :");
-    printn(stringMatch(str1, str2));
+    System.out.println("no. of occourences of substrings are : " + stringMatch(str1, str2));
 
-    printId();
+    System.out.println("\nID:18DCS129 \nNAME:MADHAV ");
 
   }
 }

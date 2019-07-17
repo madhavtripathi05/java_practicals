@@ -2,20 +2,6 @@ import java.util.*;
 
 public class mprac4 {
 
-  // DRY begins
-  public static void prints(String str) {
-    System.out.println(str);
-  }
-
-  public static void printn(int num) {
-    System.out.println(num);
-  }
-
-  public static void printId() {
-    prints("\nID:18DCS129 \nNAME:MADHAV ");
-  }
-  // ends
-
   // function to check the sequence
   public static boolean array123(int[] arr) {
     for (int i = 0; i < arr.length; ++i) {
@@ -29,11 +15,11 @@ public class mprac4 {
 
     Scanner scan = new Scanner(System.in);
 
-    prints("Enter the size of array:");
+    System.out.println("Enter the size of array:");
 
     int n = scan.nextInt();
 
-    prints("Enter " + n + " elements");
+    System.out.println("Enter " + n + " elements");
 
     // dynamic initialization of array
     int[] arr = new int[n];
@@ -43,12 +29,12 @@ public class mprac4 {
       arr[i] = scan.nextInt();
 
     scan.close();
-    // prints true if sequence found
+    // System.out.println true if sequence found
     if (array123(arr))
-      prints("true");
+      System.out.println("true");
     else
-      prints("false");
+      System.out.println("false");
 
-    printId();
+ System.out.println("\nID:18DCS129 \nNAME:MADHAV ");
   }
 }

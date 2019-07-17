@@ -1,19 +1,6 @@
 import java.util.*;
 
 public class mprac9 {
-    // DRY begins
-    public static void prints(String str) {
-        System.out.println(str);
-    }
-
-    public static void printn(int num) {
-        System.out.println(num);
-    }
-
-    public static void printId() {
-        prints("\nID:18DCS129 \nNAME:MADHAV ");
-    }
-    // ends
 
     // checking for duplicate elements
     static boolean isValid(int[] arr) {
@@ -80,10 +67,10 @@ public class mprac9 {
         // scan.close();
 
         if (isValidSoln(soln))
-            prints("Valid");
+            System.out.println("Valid");
         else
-            prints("invalid");
+            System.out.println("invalid");
 
-        printId();
+        System.out.println("\nID:18DCS129 \nNAME:MADHAV ");
     }
 }

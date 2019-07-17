@@ -1,31 +1,18 @@
-import java.util.*;
+//import java.util.*;
 
 public class mprac10 {
 
-    // DRY begins
-    public static void prints(String str) {
-        System.out.println(str);
-    }
-
-    public static void printn(double num) {
-        System.out.println(num);
-    }
-
-    public static void printId() {
-        prints("\nID:18DCS129 \nNAME:MADHAV ");
-    }
-
-    // ends
     static double Dist(double x1, double x2, double y1, double y2) {
         return (Math.sqrt(Math.pow((x1 - x2), 2) + Math.pow((y1 - y2), 2)));
     }
 
     public static void main(String[] args) {
+        // for scanning (optional)
         // Scanner scan = new Scanner(System.in);
         // //number of points(x,y)
         // int n = scan .nextInt();
         // int pts[][]=new int [n][2];
-        // prints("Enter "+n+" Points.");
+        // System.out.println("Enter "+n+" Points.");
         // for (int i = 0; i < n; i++) {
         // for (int j = 0; j < 2; j++) {
         // pts[i][j]=scan.nextInt();
@@ -49,9 +36,9 @@ public class mprac10 {
             }
 
         }
-        prints("Closest points are:");
-        prints("(" + pts[ti][0] + "," + pts[ti][1] + ") " + " (" + pts[tj][0] + "," + pts[tj][1] + ") ");
-        printId();
+        System.out.println("Closest points are:");
+        System.out.println("(" + pts[ti][0] + "," + pts[ti][1] + ") " + " (" + pts[tj][0] + "," + pts[tj][1] + ") ");
+        System.out.println("\nID:18DCS129 \nNAME:MADHAV ");
     }
 
 }
