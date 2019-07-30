@@ -1,4 +1,4 @@
-package sample;
+
 import java.util.*;
 
 class Account {
@@ -50,7 +50,7 @@ class Account {
     }
     // end
 
-    void withdraw(double balance=100) {
+    void withdraw(double balance) {
         if (this.balance-balance >= 300){
             this.balance -= balance;
          }else{

@@ -39,6 +39,7 @@ public class mprac10 {
         System.out.println("Closest points are:");
         System.out.println("(" + pts[ti][0] + "," + pts[ti][1] + ") " + " (" + pts[tj][0] + "," + pts[tj][1] + ") ");
         System.out.println("\nID:18DCS129 \nNAME:MADHAV ");
+         
     }
 
 }
