@@ -3,5 +3,7 @@
  */
 public interface P {
 
-    final int varP = 0;
+    static int varP = 0;
+
+    public void printP4();
 }
