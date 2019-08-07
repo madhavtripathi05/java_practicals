@@ -1,7 +1,0 @@
-/**
- * Luminious
- */
-public interface Luminious {
-
-   
-}

@@ -1,0 +1,7 @@
+/**
+ * Solid
+ */
+public class Solid {
+
+    
+}

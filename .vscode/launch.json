@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - mprac16",
+            "request": "launch",
+            "mainClass": "mprac16",
+            "projectName": "java_practicals_1550b986"
+        }
+    ]
+}
