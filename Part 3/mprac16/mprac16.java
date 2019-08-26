@@ -34,10 +34,9 @@ class Cone extends Solid {
 
 }
 
-class Cube extends Solid{
+class Cube extends Solid {
 
 }
-
 
 public class mprac16 {
 
@@ -48,5 +47,6 @@ public class mprac16 {
         LuminiousCube lcu = new LuminiousCube();
         lcu.lightOn();
         lcu.lightOff();
+        System.out.println("\nID:18DCS129\nNAME:MADHAV");
     }
 }

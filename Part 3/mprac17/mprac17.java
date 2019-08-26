@@ -54,6 +54,7 @@ public class mprac17 implements P12 {
         obj1.printP3();
         obj1.printP4();
         System.out.println(varP);
+        System.out.println("\nID:18DCS129\nNAME:MADHAV");
     }
 
 }

@@ -69,6 +69,10 @@ class Account {
 public class mprac12 {
     public static void main(String[] args) {
         Account account = new Account();
-
+        account.deposit(200);
+        System.out.println("After adding deposit : " + (account.getBalance()));
+        account.withdraw(100);
+        System.out.println("After withdrawing : " + (account.getBalance()));
+        System.out.println("\nID:18DCS129 \nNAME:MADHAV ");
     }
 }

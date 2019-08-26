@@ -89,6 +89,7 @@ public class mprac18 {
         b1.beep();
         b.reverse();
         c.stop();
+        System.out.println("\nID:18DCS129\nNAME:MADHAV");
         }
     
 }
