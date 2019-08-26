@@ -1,7 +1,0 @@
-/**
- * Solid
- */
-public class Solid {
-
-    
-}
