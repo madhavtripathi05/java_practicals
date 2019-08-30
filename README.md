@@ -5,3 +5,5 @@
 
 - [x] practical 1-10 (part 1)
 - [x] practical 1-5 (part 2)
+- [x] practical 1-8 (part 3)
+- [x] practical 1-3 (part 4)
