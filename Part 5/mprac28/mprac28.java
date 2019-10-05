@@ -24,7 +24,7 @@ public class mprac28 {
 
     public static void main(String[] args) throws IOException {
         // Enter main directory
-        File file = new File("C:\\Users\\Administrator\\Desktop\\p4.2");
+        File file = new File("D:\\course vids\\JAVA\\");
         if (file.exists() && file.isDirectory()) {
             File arr[] = file.listFiles();
             System.out.println("-----------------------------------------------------------------------");
