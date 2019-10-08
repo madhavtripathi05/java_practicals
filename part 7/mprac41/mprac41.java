@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 class Sorting {
@@ -28,16 +27,16 @@ class Sorting {
 
 class mprac41 {
     public static void main(String[] args) {
-        Scanner scnr = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         Sorting s = new Sorting();
 
         System.out.println("Enter the size of the array : ");
-        int n = scnr.nextInt();
+        int n = scan.nextInt();
         Integer arr[] = new Integer[n];
 
         System.out.println("Enter the elements of the array: ");
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = scnr.nextInt();
+            arr[i] = scan.nextInt();
         }
 
         System.out.println("\nThe elements you entered are: ");
@@ -46,6 +45,7 @@ class mprac41 {
         System.out.println("\nElements after sorting:");
         s.display(s.sort(arr));
 
+        scan.close();
         System.out.println("\nNAME:MADHAV\nID:18DCS129\n");
     }
 }
