@@ -17,7 +17,7 @@ class CheckEqual {
     }
 }
 
-class Prac9 {
+public class Prac9 {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         int n, m;

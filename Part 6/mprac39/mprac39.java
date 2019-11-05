@@ -1,82 +1,99 @@
-import java.util.*;
-
-class Item {
-	private int content;
-	private boolean available = false;
-
-	public synchronized int get() {
-		while (available == false) {
-			try {
-				wait();
-			} catch (InterruptedException e) {
-			}
-		}
-		available = false;
-		notifyAll();
-		return content;
-	}
-
-	public synchronized void put(int value) {
-		while (available == true) {
-			try {
-				wait();
-			} catch (InterruptedException e) {
-			}
-		}
-		content = value;
-		available = true;
-		notifyAll();
-	}
-}
-
-class Producer extends Thread {
-	private Item obj;
-	private int number;
-
-	public Producer(Item i1, int n) {
-		obj = i1;
-		number = n;
-	}
-
-	public void run() {
-		for (int i = 0; i < 5; i++) {
-			obj.put(i);
-			System.out.println("Producer " + number + ":" + i);
-			try {
-				sleep((int) (Math.random() * 100));
-			} catch (InterruptedException e) {
-			}
-		}
-	}
-}
-
-class Consumer extends Thread {
-	private Item obj;
-	private int number;
-
-	public Consumer(Item i1, int n) {
-		obj = i1;
-		number = n;
-	}
-
-	public void run() {
-		int value = 0;
-		for (int i = 0; i < 5; i++) {
-			value = obj.get();
-			System.out.println("Consumer " + number + ":" + value);
-		}
-	}
-}
+import java.util.LinkedList;
 
 public class mprac39 {
-	public static void main(String[] args) {
-		Item i = new Item();
-		Producer p = new Producer(i, 1);
-		Consumer c = new Consumer(i, 1);
+	public static void main(String[] args) throws InterruptedException {
+		// Object of a class that has both produce()
+		// and consume() methods
+		final PC pc = new PC();
 
-		p.start();
-		c.start();
+		// Create producer thread
+		Thread t1 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					pc.produce();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		});
 
-		System.out.println("\nNAME:MADHAV\nID:18DCS129\n");
+		// Create consumer thread
+		Thread t2 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					pc.consume();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+
+		// Start both threads
+		t1.start();
+		t2.start();
+
+		// t1 finishes before t2
+		t1.join();
+		t2.join();
+	}
+
+	// This class has a list, producer (adds items to list
+	// and consumber (removes items).
+	public static class PC {
+		// Create a list shared by producer and consumer
+		// Size of list is 2.
+		LinkedList<Integer> list = new LinkedList<>();
+		int capacity = 2;
+
+		// Function called by producer thread
+		public void produce() throws InterruptedException {
+			int value = 0;
+			while (true) {
+				synchronized (this) {
+					// producer thread waits while list
+					// is full
+					while (list.size() == capacity)
+						wait();
+
+					System.out.println("Producer produced-" + value);
+
+					// to insert the jobs in the list
+					list.add(value++);
+
+					// notifies the consumer thread that
+					// now it can start consuming
+					notify();
+
+					// makes the working of program easier
+					// to understand
+					Thread.sleep(1000);
+				}
+			}
+		}
+
+		// Function called by consumer thread
+		public void consume() throws InterruptedException {
+			while (true) {
+				synchronized (this) {
+					// consumer thread waits while list
+					// is empty
+					while (list.size() == 0)
+						wait();
+
+					// to retrive the ifrst job in the list
+					int val = list.removeFirst();
+
+					System.out.println("Consumer consumed-" + val);
+
+					// Wake up producer thread
+					notify();
+
+					// and sleep
+					Thread.sleep(1000);
+				}
+			}
+		}
 	}
 }
